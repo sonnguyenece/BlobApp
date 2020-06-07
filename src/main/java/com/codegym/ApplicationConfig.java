@@ -1,13 +1,7 @@
 package com.codegym;
 
-//import com.codegym.cms.repository.CustomerRepository;
-//import com.codegym.cms.service.CustomerService;
-//import com.codegym.cms.service.ProvinceService;
-//import com.codegym.cms.service.impl.CustomerServiceImpl;
-//import com.codegym.cms.service.impl.ProvinceServiceImpl;
 import com.codegym.service.BlogService;
 import com.codegym.service.Impl.BlogServiceImpl;
-import org.jboss.logging.BasicLogger;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -30,12 +24,10 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
-
 
 //thay thế cho việc cấu hình dispatcher-servlet trong cấu hình xml
 @Configuration
