@@ -5,6 +5,9 @@ package com.codegym;
 //import com.codegym.cms.service.ProvinceService;
 //import com.codegym.cms.service.impl.CustomerServiceImpl;
 //import com.codegym.cms.service.impl.ProvinceServiceImpl;
+import com.codegym.service.BlogService;
+import com.codegym.service.Impl.BlogServiceImpl;
+import org.jboss.logging.BasicLogger;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -39,7 +42,7 @@ import java.util.Properties;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan("com.codegym")
-//@EnableJpaRepositories("com.codegym.repository")
+@EnableJpaRepositories("com.codegym.repository")
 public class ApplicationConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
@@ -50,10 +53,10 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     }
 
 
-//    @Bean
-//    public ProvinceService provinceService() {
-//        return new ProvinceServiceImpl();
-//    }
+    @Bean
+    public BlogService blogService() {
+        return new BlogServiceImpl();
+    }
 
 
     //Thymeleaf Configuration

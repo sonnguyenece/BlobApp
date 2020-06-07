@@ -8,12 +8,12 @@ public class Blog {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
-    private String tittle;
+    private String title;
     private String content;
 
-    public Blog(long id, String tittle, String content) {
+    public Blog(long id, String title, String content) {
         this.id = id;
-        this.tittle = tittle;
+        this.title = title;
         this.content = content;
     }
 
@@ -28,12 +28,12 @@ public class Blog {
         this.id = id;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getContent() {
