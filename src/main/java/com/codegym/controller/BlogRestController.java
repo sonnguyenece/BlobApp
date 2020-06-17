@@ -28,5 +28,13 @@ public class BlogRestController {
         return new ResponseEntity<>(blogDetail, HttpStatus.OK);
     }
 
+    @PostMapping(value = "/api/blog/{id}")
+    public ResponseEntity<Blog> deleteBlog(@PathVariable("id") Long id) {
+        Blog blog= blogService.findById(id);
+
+        if (blog == null) return new ResponseEntity<Blog>(HttpStatus.NO_CONTENT);
+        else blogService.remove(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }
